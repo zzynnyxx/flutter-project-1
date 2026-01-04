@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TodoTile extends StatelessWidget {
   final String taskName;
   final bool taskComplete;
-  Function(bool?)? onChanged;
+   final Function(bool?)? onChanged;
 
   TodoTile({
     super.key,
