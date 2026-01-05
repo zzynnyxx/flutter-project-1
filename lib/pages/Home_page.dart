@@ -3,13 +3,16 @@ import 'package:flutter_1/Util/dialog_box.dart';
 import 'package:flutter_1/Util/todo_tile.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
+
+    //text controller
+  final _controller = TextEditingController;
   // List of Todo Tasks
   List toDoList = [
     ["Make tutorial", false],
@@ -29,7 +32,9 @@ class _HomePageState extends State<HomePage> {
     showDialog(
       context: context,
       builder: (context) {
-        return DialogBox();
+        return DialogBox(
+          controller:_controller,
+        );
       },
     );
   }
